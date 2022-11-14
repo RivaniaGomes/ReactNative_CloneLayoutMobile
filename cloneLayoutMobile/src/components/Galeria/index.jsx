@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: "row",
         backgroundColor: "#fff",
-        height: "80%",
+        height: "60%",
     },
     subarea: {
         flex: 1,

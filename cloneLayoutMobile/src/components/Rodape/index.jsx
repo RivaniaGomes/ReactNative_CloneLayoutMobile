@@ -6,7 +6,7 @@ import LogoRed from "../../../assets/logo_red3.png";
 import Coracao from "../../../assets/coracao.png";
 import Carrinho from "../../../assets/carrinhoVazio.png";
 
-const Cabecalho = () => {
+const Rodape = () => {
     return (
         <View style={styles.container}>
             <View style={{ width: "26%", height: "7%", marginTop: 5 }}>
@@ -28,14 +28,12 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: "#fff",
         flexDirection: "row",
-        justifyContent: "space-between",
+        justifyContent: "flex-end",
         alignItems: "flex-start",
-        marginTop: "10%",
+        //marginTop: "10%",
         position: "relative",
         width: "100%",
         height: 55,
-        borderWidth: 0.5,
-        borderColor: "grey",
     },
     logo: {
         marginTop: 5,
@@ -57,4 +55,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Cabecalho;
+export default Rodape;
