@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, ScrollView, useWindowDimensions, Image } from "react-native";
+import { View, ScrollView, useWindowDimensions, Image } from "react-native";
 
 import Carrossel1 from "../../../assets/HOME_CARROSSEL55.jpg";
 import Carrossel2 from "../../../assets/HOME_CARROSSEL66.jpg";
@@ -41,7 +41,6 @@ const Carrossel = () => {
         console.log(`${size} ${index} ${offset}`);
     };
 
-
     React.useEffect(() => {
         const timer = setTimeout(autoScroll, 3000);
 
@@ -49,13 +48,7 @@ const Carrossel = () => {
     });
 
     return (
-        <View
-            style={{
-                justifyContent: "center",
-                alignItems: "center",
-            }}
-        >
-
+        <View style={{ justifyContent: "center", alignItems: "center" }}>
             <ScrollView
                 ref={scrollViewRef}
                 horizontal
@@ -68,9 +61,6 @@ const Carrossel = () => {
                     <Image key={item.image} style={{ width, height: "100%", flex: 1 }} source={item.image} />
                 ))}
             </ScrollView>
-
-
-            <Text>{data[index].image}</Text>
         </View>
     );
 }

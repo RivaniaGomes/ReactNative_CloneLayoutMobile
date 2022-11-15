@@ -46,9 +46,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     // height: "80%"
   },
-  // categoria: {
-  //   height: "15%"
-  // },
+  categoria: {
+    height: "15%"
+  },
   // carrossel: {
   //   height: "30%"
   // },

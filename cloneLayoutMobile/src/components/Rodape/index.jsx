@@ -1,25 +1,31 @@
 import React from "react";
-import { View, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet } from "react-native";
 
-import Pesquisa from "../../../assets/pesquisa.png";
-import LogoRed from "../../../assets/logo_red3.png";
-import Coracao from "../../../assets/coracao.png";
-import Carrinho from "../../../assets/carrinhoVazio.png";
+
+import Renner from "../../../assets/logoR.png";
+import Blog from "../../../assets/blog.png";
+import Categoria from "../../../assets/categoria.jpg";
+import Cartao from "../../../assets/cartao.png";
+import Menu from "../../../assets/menu.png";
 
 const Rodape = () => {
     return (
         <View style={styles.container}>
-            <View style={{ width: "26%", height: "7%", marginTop: 5 }}>
-                <Image source={Pesquisa} style={styles.imgTag} />
+            <View style={{ width: "20%", height: "7%" }}>
+                <Image source={Renner} style={styles.imgTag} />
+                <Text>Inicio</Text>
             </View>
-            <View style={{ width: "39%", height: "80%" }}>
-                <Image source={LogoRed} style={styles.logo} />
+            <View style={{ width: "20%", height: "7%" }}>
+                <Image source={Blog} style={styles.imgTag} />
             </View>
-            <View style={{ width: "16%", height: "7%" }}>
-                <Image source={Coracao} style={styles.imgTag} />
+            <View style={{ width: "20%", height: "7%" }}>
+                <Image source={Categoria} style={styles.imgTag} />
             </View>
-            <View style={{ width: "16%", height: "7%" }}>
-                <Image source={Carrinho} style={styles.imgTag} />
+            <View style={{ width: "20%", height: "7%" }}>
+                <Image source={Cartao} style={styles.imgTag} />
+            </View>
+            <View style={{ width: "20%", height: "7%" }}>
+                <Image source={Menu} style={styles.imgTag} />
             </View>
         </View>
     );
