@@ -1,5 +1,5 @@
 import React from "react";
-import { View, ScrollView, useWindowDimensions, Image } from "react-native";
+import { View, ScrollView, useWindowDimensions, Image, TouchableOpacity } from "react-native";
 
 import Carrossel1 from "../../../assets/HOME_CARROSSEL55.jpg";
 import Carrossel2 from "../../../assets/HOME_CARROSSEL66.jpg";
@@ -48,18 +48,20 @@ const Carrossel = () => {
     });
 
     return (
-        <View style={{ justifyContent: "center", alignItems: "center" }}>
+        <View style={ { justifyContent: "center", alignItems: "center" } }>
             <ScrollView
-                ref={scrollViewRef}
+                ref={ scrollViewRef }
                 horizontal
-                showsHorizontalScrollIndicator={false}
-                contentContainerStyle={{ height: width / 1.5 }}
+                showsHorizontalScrollIndicator={ false }
+                contentContainerStyle={ { height: width / 1.5 } }
                 pagingEnabled
-                contentOffset={{ x: 380, y: 0 }}
+                contentOffset={ { x: 380, y: 0 } }
             >
-                {data.map((item) => (
-                    <Image key={item.image} style={{ width, height: "100%", flex: 1 }} source={item.image} />
-                ))}
+                { data.map((item) => (
+                    <TouchableOpacity>
+                        <Image key={ item.image } style={ { width, height: "100%", flex: 1 } } source={ item.image } />
+                    </TouchableOpacity>
+                )) }
             </ScrollView>
         </View>
     );

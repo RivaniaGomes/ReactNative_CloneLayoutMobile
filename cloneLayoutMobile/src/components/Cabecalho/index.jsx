@@ -1,26 +1,28 @@
 import React from "react";
-import { View, Image, StyleSheet } from "react-native";
+import { View, Image, StyleSheet, TouchableOpacity } from "react-native";
+
 
 import Pesquisa from "../../../assets/pesquisa.png";
 import LogoRed from "../../../assets/logo_red3.png";
 import Coracao from "../../../assets/coracao.png";
 import Carrinho from "../../../assets/carrinhoVazio.png";
 
+
 const Cabecalho = () => {
     return (
-        <View style={styles.container}>
-            <View style={{ width: "26%", height: "7%", marginTop: 5 }}>
-                <Image source={Pesquisa} style={styles.imgTag} />
-            </View>
-            <View style={{ width: "39%", height: "80%" }}>
-                <Image source={LogoRed} style={styles.logo} />
-            </View>
-            <View style={{ width: "16%", height: "7%" }}>
-                <Image source={Coracao} style={styles.imgTag} />
-            </View>
-            <View style={{ width: "16%", height: "7%" }}>
-                <Image source={Carrinho} style={styles.imgTag} />
-            </View>
+        <View style={ styles.container }>
+            <TouchableOpacity style={ { width: "26%", height: "7%", marginTop: 5 } } onPress={ () => { } }>
+                <Image source={ Pesquisa } style={ styles.imgTag } />
+            </TouchableOpacity>
+            <TouchableOpacity style={ { width: "39%", height: "80%" } }>
+                <Image source={ LogoRed } style={ styles.logo } />
+            </TouchableOpacity>
+            <TouchableOpacity style={ { width: "16%", height: "7%" } }>
+                <Image source={ Coracao } style={ styles.imgTag } />
+            </TouchableOpacity>
+            <TouchableOpacity style={ { width: "16%", height: "7%" } }>
+                <Image source={ Carrinho } style={ styles.imgTag } />
+            </TouchableOpacity>
         </View>
     );
 }

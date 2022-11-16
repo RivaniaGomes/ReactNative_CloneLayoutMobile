@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, TouchableOpacity, Image, StyleSheet } from "react-native";
 
 
 import Renner from "../../../assets/logoR.png";
@@ -10,23 +10,22 @@ import Menu from "../../../assets/menu.png";
 
 const Rodape = () => {
     return (
-        <View style={styles.container}>
-            <View style={{ width: "20%", height: "7%" }}>
-                <Image source={Renner} style={styles.imgTag} />
-                <Text>Inicio</Text>
-            </View>
-            <View style={{ width: "20%", height: "7%" }}>
-                <Image source={Blog} style={styles.imgTag} />
-            </View>
-            <View style={{ width: "20%", height: "7%" }}>
-                <Image source={Categoria} style={styles.imgTag} />
-            </View>
-            <View style={{ width: "20%", height: "7%" }}>
-                <Image source={Cartao} style={styles.imgTag} />
-            </View>
-            <View style={{ width: "20%", height: "7%" }}>
-                <Image source={Menu} style={styles.imgTag} />
-            </View>
+        <View style={ styles.container }>
+            <TouchableOpacity style={ { width: "20%", height: "7%" } }>
+                <Image source={ Renner } style={ styles.imgTag } />
+            </TouchableOpacity>
+            <TouchableOpacity style={ { width: "20%", height: "7%" } }>
+                <Image source={ Blog } style={ styles.imgTag } />
+            </TouchableOpacity>
+            <TouchableOpacity style={ { width: "20%", height: "7%" } }>
+                <Image source={ Categoria } style={ styles.imgTag } />
+            </TouchableOpacity>
+            <TouchableOpacity style={ { width: "20%", height: "7%" } }>
+                <Image source={ Cartao } style={ styles.imgTag } />
+            </TouchableOpacity>
+            <TouchableOpacity style={ { width: "20%", height: "7%" } }>
+                <Image source={ Menu } style={ styles.imgTag } />
+            </TouchableOpacity>
         </View>
     );
 }

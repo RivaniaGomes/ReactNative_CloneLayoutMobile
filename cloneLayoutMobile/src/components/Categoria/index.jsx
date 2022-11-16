@@ -1,6 +1,5 @@
 import React from "react";
-import { View, ScrollView, useWindowDimensions, Image, StyleSheet, Text } from "react-native";
-import Rodape from './../Rodape/index';
+import { View, ScrollView, useWindowDimensions, Image, StyleSheet, TouchableOpacity } from "react-native";
 
 const data = [
     {
@@ -47,18 +46,20 @@ const Categoria = () => {
     });
 
     return (
-        <View style={styles.categoria}>
+        <View style={ styles.categoria }>
             <ScrollView
-                ref={scrollViewRef}
+                ref={ scrollViewRef }
                 horizontal
-                showsHorizontalScrollIndicator={false}
-                contentContainerStyle={{ height: width / 3 }}
+                showsHorizontalScrollIndicator={ false }
+                contentContainerStyle={ { height: width / 3 } }
                 pagingEnabled
-                contentOffset={{ x: 380, y: 0 }}
+                contentOffset={ { x: 380, y: 0 } }
             >
-                {data.map((item) => (
-                    <Image key={item.image} style={{ width, height: "100%" }} source={item.image} />
-                ))}
+                { data.map((item) => (
+                    <TouchableOpacity>
+                        <Image key={ item.image } style={ { width, height: "100%" } } source={ item.image } />
+                    </TouchableOpacity>
+                )) }
             </ScrollView>
         </View>
     );
